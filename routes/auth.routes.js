@@ -7,11 +7,11 @@ router.post('/register', register);
 router.post('/', login);
 
 router.get('/register', (req,res) => {
-    res.sendFile('register.html', {root: 'C:/projects/Inventaris-Cafe/views/'})
+    res.render('register');
 })
 
 router.get('/', (req,res) => {
-    res.sendFile('login.html', {root: 'C:/projects/Inventaris-Cafe/views/'})
+    res.sendFile('login.html')
 })
 
 

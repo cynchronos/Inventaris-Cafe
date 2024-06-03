@@ -4,8 +4,9 @@ const { User } = require('../models');
 const register = async (req, res) => {
     try {
         const { username, email, password } = req.body;
-        const user = await User.create({ username, email, password });
-        res.status(201).json(user);
+        console.log(username, email, password);
+        // const user = await User.create({ username, email, password });
+        res.status(201).json(req.body);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
